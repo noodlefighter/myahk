@@ -29,8 +29,8 @@ return
     Run, http://www.google.com/search?q=%clipboard%
 Return
 
-;---- 按 Win + N ，复制文字用记事本查看
-#n::
+;---- 按 Win + F ，复制文字，追加到Notepad++，可用于快速收集、编辑文本
+#f::
     Sleep, 100
     Send ^c
     Sleep, 100
@@ -44,6 +44,6 @@ Return
         WinWait ahk_class Notepad++
         WinActivate
     }
-    Send ^v
+    Send ^{End} ^{Enter} ^v
 return
 
